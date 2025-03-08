@@ -15,16 +15,13 @@ describe("landing page ", () => {
     cy.get('#login-button').click();
     cy.url().should("include", "inventory.html")
   })
-  it("verify if landing page is reacheable", () => { })
-
-  it("Login with valid credentials", () => { })
-
   it('Add to cart', () => {
       cy.get(cy.get(':nth-child(1) > .pricebar > .btn_primary').click())
       cy.get(cy.get('.fa-layers-counter').should("contain", 1));
   });
-  it("perform logout", () => {
-  cy.get('.bm-burger-button > button').click();
+  it ("perform logout", () => {
+    cy.get('.bm-burger-button > button').click();
+    cy.pause();
     cy.get('#logout_sidebar_link').click();
    cy.get('#login-button').should('be.visible');
   })
@@ -39,3 +36,14 @@ describe("landing page ", () => {
     // run at the every end of test
   });
 })
+
+//headed test :- saw browser , slow
+//headless test :- not show browser , false tests are show in the report , run in terminal or server
+  // headless mode run at the end of project
+  // fast
+// npx cypress run
+
+//cy.wait(5000); // wait for 5 sec , its recommended to use
+//cy.reload()   // reload the page
+//cy.pause(); // pause the test . when you allow it then move to next step
+
