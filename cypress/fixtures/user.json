@@ -1,0 +1,12 @@
+{
+    "validUser" :{
+        "userName" : "standard_user",
+        "password" : "secret_sauce" 
+    },
+    "invald" : {
+        "userName": "standard_user",
+        "password": "invald password"
+    },
+
+    "search" : "T-Shirt"
+}
